@@ -1,0 +1,97 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Video Background */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: translateX(-11%);
+}
+
+/* Overlay Content */
+.overlay {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* subtle dark overlay */
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #111111;
+}
+
+.tagline {
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: #111111;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Three Columns */
+.links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link-box {
+  padding: 1rem 2rem;
+  border: 1px solid #111111;
+  border-radius: 6px;
+  color: #111111;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.link-box:hover {
+  background: #111111;
+  color: black;
+}
+.intro {
+  color: #111111;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.highlight-text {
+  color: #111111;
+  font-weight: bold;
+}
