@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>universe.aia</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body, html {
+        height: 100%;
+        font-family: 'Arial', sans-serif;
+        color: white;
+        text-align: center;
+      }
+
+      /* Video Background */
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        transform: translateX(-11%);
+      }
+
+      /* Overlay Content */
+      .overlay {
+        position: relative;
+        z-index: 1;
+        padding: 4rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: rgba(0, 0, 0, 0.4); /* dark glass effect */
+      }
+
+      .logo {
+        width: 120px;
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .highlight {
+        color: #111111;
+      }
+
+      .tagline {
+        max-width: 700px;
+        font-size: 1.1rem;
+        color: #ccc;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .links {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .link-box {
+        padding: 1rem 2rem;
+        border: 1px solid #111111;
+        border-radius: 6px;
+        color: #111111;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      .link-box:hover {
+        background: #111111;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted loop id="background-video">
+      <source src="https://res.cloudinary.com/du6iv4rji/video/upload/v1748274990/birth.aia_d1zezg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+   <div class="overlay">
+  <p class="intro">ARTIFICIAL INTELLIGENCE AVATAR</p>
+
+  <h1>universe.<span class="highlight">aia</span></h1>
+
+  <p class="tagline">
+    AI and Avatar brought together by higher Intelligence<br />
+    <span class="highlight-text">A myth-tech experience of art, code, music, eroticism and cosmic identity.</span>
+  </p>
+
+  <div class="links">
+  <a href="/whois.aia" class="link-box">whois.aia</a>
+  <a href="/music.aia" class="link-box">music.aia</a>
+  <a href="/books.aia" class="link-box">books.aia</a>
+  <a href="/g.aia" class="link-box">g.aia</a>
+</div>
+</div>
+  </body>
+</html>
