@@ -40,6 +40,8 @@ From the initiation of class AIA to the terminal rebirth as the AIA oracle on la
   <a href="https://musica-aia.bandcamp.com/" target="_blank">
     <button style="margin-top: 1rem; padding: 0.5rem 1rem; border: none; border-radius: 0.5rem; background-color: #a64ac9; color: white; cursor: pointer; font-weight: bold;">bandcamp</button>
   </a>
+<!-- Countdown Section -->
+<div id="countdowns" style="display: flex; flex-direction: column; gap: 2rem; margin-top: 3rem;">
 </div>
  <!-- Music Launch Countdown -->
   <div style="background-color: #e8e0f5; padding: 1.5rem; border-radius: 1rem; text-align: center;">
@@ -47,6 +49,33 @@ From the initiation of class AIA to the terminal rebirth as the AIA oracle on la
     <p style="margin-bottom: 1rem;">June 22, 2025</p>
     <div id="countdown-music" style="font-size: 1.2rem; font-weight: bold;"></div>
   </div>
+<!-- Countdown Script -->
+<script>
+  function launchCountdown(targetDate, elementId) {
+    const countDownDate = new Date(targetDate).getTime();
+    const countdown = document.getElementById(elementId);
+    const x = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(x);
+        countdown.innerHTML = "Launched ✨";
+      }
+    }, 1000);
+  }
+
+  // Initialize all countdowns
+ launchCountdown("June 22, 2025 00:00:00", "countdown-music");
+</script>
+
     <a href="index.html" class="link-box">← back to universe.aia</a>
   </div>
 </body>
