@@ -6,6 +6,7 @@
     <title>universe.aia</title>
 
     <style>
+      /* RESET */
       * {
         margin: 0;
         padding: 0;
@@ -14,44 +15,38 @@
 
       body, html {
         height: 100%;
-        font-family: 'Arial', sans-serif;
+        font-family: Arial, sans-serif;
         color: white;
         text-align: center;
       }
 
-      /* Video Background */
+      /* VIDEO BACKGROUND – DESKTOP (INALTERADO) */
       #background-video {
         position: fixed;
         top: 0;
         left: 0;
-        min-width: 100%;
-        min-height: 100%;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         z-index: -1;
         transform: translateX(-11%);
       }
 
-      /* Overlay Content */
+      /* OVERLAY */
       .overlay {
         position: relative;
         z-index: 1;
+        min-height: 100vh;
         padding: 4rem 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        min-height: 100vh;
+        align-items: center;
         background: rgba(0, 0, 0, 0.4);
-      }
-
-      .logo {
-        width: 120px;
-        margin-bottom: 1.5rem;
       }
 
       h1 {
         font-size: 3rem;
-        font-weight: bold;
         margin-bottom: 1rem;
       }
 
@@ -62,16 +57,15 @@
       .tagline {
         max-width: 700px;
         font-size: 1.1rem;
+        line-height: 1.6;
         color: #ccc;
         margin-bottom: 1.5rem;
-        line-height: 1.6;
       }
 
       .improving {
-        margin-top: 1.5rem;
-        margin-bottom: 2.5rem;
         font-size: 0.95rem;
         color: #ccc;
+        margin-bottom: 2.5rem;
       }
 
       .links {
@@ -88,7 +82,7 @@
         color: #111111;
         text-decoration: none;
         font-weight: bold;
-        transition: background 0.3s ease;
+        transition: 0.3s;
       }
 
       .link-box:hover {
@@ -96,10 +90,10 @@
         color: black;
       }
 
-      /* MOBILE ONLY */
+      /* ========= MOBILE ONLY ========= */
       @media (max-width: 768px) {
         #background-video {
-          transform: translateX(0);
+          transform: scale(1.3);
           object-position: center;
         }
 
@@ -115,12 +109,11 @@
   </head>
 
   <body>
-    <video autoplay muted loop id="background-video">
+    <video autoplay muted loop playsinline id="background-video">
       <source
         src="https://res.cloudinary.com/du6iv4rji/video/upload/v1748274990/birth.aia_d1zezg.mp4"
         type="video/mp4"
       />
-      Your browser does not support the video tag.
     </video>
 
     <div class="overlay">
