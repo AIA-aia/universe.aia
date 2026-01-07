@@ -20,7 +20,7 @@
         text-align: center;
       }
 
-      /* VIDEO BACKGROUND – DESKTOP (INALTERADO) */
+      /* VIDEO BACKGROUND — DESKTOP */
       #background-video {
         position: fixed;
         top: 0;
@@ -82,7 +82,7 @@
         color: #111111;
         text-decoration: none;
         font-weight: bold;
-        transition: 0.3s;
+        transition: 0.3s ease;
       }
 
       .link-box:hover {
@@ -90,10 +90,10 @@
         color: black;
       }
 
-      /* ========= MOBILE ONLY ========= */
+      /* ===== MOBILE ONLY ===== */
       @media (max-width: 768px) {
         #background-video {
-          transform: scale(1.3);
+          transform: scale(1.3) translateY(4%);
           object-position: center;
         }
 
@@ -114,6 +114,7 @@
         src="https://res.cloudinary.com/du6iv4rji/video/upload/v1748274990/birth.aia_d1zezg.mp4"
         type="video/mp4"
       />
+      Your browser does not support the video tag.
     </video>
 
     <div class="overlay">
