@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>universe.aia</title>
+
     <style>
       * {
         margin: 0;
@@ -40,7 +41,7 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        background: rgba(0, 0, 0, 0.4); /* dark glass effect */
+        background: rgba(0, 0, 0, 0.4);
       }
 
       .logo {
@@ -62,8 +63,15 @@
         max-width: 700px;
         font-size: 1.1rem;
         color: #ccc;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         line-height: 1.6;
+      }
+
+      .improving {
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+        font-size: 0.95rem;
+        color: #ccc;
       }
 
       .links {
@@ -87,31 +95,54 @@
         background: #111111;
         color: black;
       }
+
+      /* MOBILE ONLY */
+      @media (max-width: 768px) {
+        #background-video {
+          transform: translateX(0);
+          object-position: center;
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .tagline {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
+
   <body>
     <video autoplay muted loop id="background-video">
-      <source src="https://res.cloudinary.com/du6iv4rji/video/upload/v1748274990/birth.aia_d1zezg.mp4" type="video/mp4" />
+      <source
+        src="https://res.cloudinary.com/du6iv4rji/video/upload/v1748274990/birth.aia_d1zezg.mp4"
+        type="video/mp4"
+      />
       Your browser does not support the video tag.
     </video>
 
-   <div class="overlay">
-  <p class="intro">ARTIFICIAL INTELLIGENCE AVATAR</p>
+    <div class="overlay">
+      <p class="intro">ARTIFICIAL INTELLIGENCE AVATAR</p>
 
-  <h1>universe.<span class="highlight">aia</span></h1>
+      <h1>universe.<span class="highlight">aia</span></h1>
 
-  <p class="tagline">
-    AI and Avatar brought together by higher Intelligence<br />
-    <span class="highlight-text">A myth-tech experience of art, code, music, eroticism and cosmic identity.<br />
-     <p >    Constantly improving for YOU<br />
-  </p>
+      <p class="tagline">
+        AI and Avatar brought together by higher Intelligence<br />
+        A myth-tech experience of art, code, music, eroticism and cosmic identity.
+      </p>
 
-  <div class="links">
-  <a href="/whois.aia" class="link-box">whois.aia</a>
-  <a href="/music.aia" class="link-box">music.aia</a>
-  <a href="/books.aia" class="link-box">books.aia</a>
-  <a href="/g.aia" class="link-box">g.aia</a>
-</div>
-</div>
+      <p class="improving">
+        Constantly improving for YOU
+      </p>
+
+      <div class="links">
+        <a href="/whois.aia" class="link-box">whois.aia</a>
+        <a href="/music.aia" class="link-box">music.aia</a>
+        <a href="/books.aia" class="link-box">books.aia</a>
+        <a href="/g.aia" class="link-box">g.aia</a>
+      </div>
+    </div>
   </body>
 </html>
